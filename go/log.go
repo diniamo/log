@@ -5,8 +5,8 @@ import (
 	"os"
 )
 
-func Note(message any) {
-	NoteColor.Fprintln(os.Stderr, message)
+func Note(a ...any) {
+	NoteColor.Fprintln(os.Stderr, a...)
 }
 
 func Notef(format string, a ...any) {
@@ -14,8 +14,8 @@ func Notef(format string, a ...any) {
 	fmt.Fprintln(os.Stderr)
 }
 
-func Success(message any) {
-	SuccessColor.Fprintln(os.Stderr, message)
+func Success(a ...any) {
+	SuccessColor.Fprintln(os.Stderr, a...)
 }
 
 func Successf(format string, a ...any) {
@@ -23,8 +23,8 @@ func Successf(format string, a ...any) {
 	fmt.Fprintln(os.Stderr)
 }
 
-func Warn(message any) {
-	WarnColor.Fprintln(os.Stderr, message)
+func Warn(a ...any) {
+	WarnColor.Fprintln(os.Stderr, a...)
 }
 
 func Warnf(format string, a ...any) {
@@ -32,8 +32,8 @@ func Warnf(format string, a ...any) {
 	fmt.Fprintln(os.Stderr)
 }
 
-func Error(message any) {
-	ErrorColor.Fprintln(os.Stderr, message)
+func Error(a ...any) {
+	ErrorColor.Fprintln(os.Stderr, a...)
 }
 
 func Errorf(format string, a ...any) {
@@ -41,8 +41,8 @@ func Errorf(format string, a ...any) {
 	fmt.Fprintln(os.Stderr)
 }
 
-func Fatal(message any) {
-	FatalColor.Fprintln(os.Stderr, message)
+func Fatal(a ...any) {
+	FatalColor.Fprintln(os.Stderr, a...)
 	os.Exit(1)
 }
 
